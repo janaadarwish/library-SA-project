@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+    url("https://images.squarespace-cdn.com/content/v1/534ad50ae4b04a5110f5ae72/f0cd330d-46de-4f2e-864a-31e2741cf6ae/Salle+Ovale%2C+BNF+Richelieu%2C+Henri+Labrouste%2C+1936.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  background: rgba(0,0,0,0.65);
+  padding: 20px 25px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1rem;
+}
+.navbar a {
+  color: white;
+  margin-left: 25px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Glass effect container */
+.container {
+  max-width: 600px;
+  margin: 60px auto 0 auto;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: white;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fff;
+}
+
+/* Form styles */
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(255,255,255,0.5);
+  border-radius: 5px;
+  font-size: 15px;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  resize: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #eee;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background: rgba(76,110,245,0.8);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background: rgba(76,110,245,1);
+}
+
+/* Footer */
+.footer {
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 15px;
+  text-align: center;
+  margin-top: auto;
+}
