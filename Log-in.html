@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bookstore Login / Register</title>
+  <link rel="stylesheet" href="logstyle.css">
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="logo">📚 Bookstore</div>
+    <div class="links">
+      <a href="#">Login/Register</a>
+      <a href="#">Find Your Book</a>
+      <a href="#">Find Your Genre</a>
+      <a href="#">Trendy Books</a>
+      <a href="#">About Us / Contact Us</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="tab-switch">
+      <button class="tab-btn active" onclick="showTab('login')">Login</button>
+      <button class="tab-btn" onclick="showTab('register')">Register</button>
+    </div>
+
+    <!-- Login Form -->
+    <form id="login" class="tab-form">
+      <label>Email</label>
+      <input type="email" placeholder="Enter your email" required>
+
+      <label>Password</label>
+      <input type="password" placeholder="Enter your password" required>
+
+      <label>Select Role</label>
+      <select required>
+        <option value="admin">Administrator</option>
+        <option value="visitor">Visitor</option>
+      </select>
+
+      <button type="submit">Login</button>
+    </form>
+
+    <!-- Register Form -->
+    <form id="register" class="tab-form" style="display:none;">
+      <label>Full Name</label>
+      <input type="text" placeholder="Enter your name" required>
+
+      <label>Email</label>
+      <input type="email" placeholder="Enter your email" required>
+
+      <label>Password</label>
+      <input type="password" placeholder="Enter a password" required>
+
+      <label>Confirm Password</label>
+      <input type="password" placeholder="Confirm your password" required>
+
+      <label>Select Role</label>
+      <select required>
+        <option value="admin">Administrator</option>
+        <option value="visitor">Visitor</option>
+      </select>
+
+      <button type="submit">Register</button>
+    </form>
+  </div>
+
+  <div class="footer">
+    © 2025 Bookstore. All Rights Reserved.
+  </div>
+
+  <script>
+    function showTab(tab) {
+      document.getElementById('login').style.display = tab === 'login' ? 'block' : 'none';
+      document.getElementById('register').style.display = tab === 'register' ? 'block' : 'none';
+      const buttons = document.querySelectorAll('.tab-btn');
+      buttons[0].classList.toggle('active', tab === 'login');
+      buttons[1].classList.toggle('active', tab === 'register');
+    }
+  </script>
+
+</body>
+</html>
