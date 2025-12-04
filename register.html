@@ -17,74 +17,118 @@
         display: flex;
         flex-direction: column;
 
-        background: url("https://upload.wikimedia.org/wikipedia/commons/4/4b/Long_Room_Interior%2C_Trinity_College_Dublin%2C_Ireland_-_Diliff.jpg")
-            no-repeat center center/cover;
+        background: url(assets/registerpage.jpg);
     }
 
-    .library-nav {
-        padding: 25px 8%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 7%;
+}
 
-        background: rgba(0, 0, 0, 0.6);
-        backdrop-filter: blur(4px);
-    }
+.navbar ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
 
-    .nav-logo {
-        font-size: 1.7rem;
-        font-weight: 700;
-        letter-spacing: 1px;
-        color: #fff;
-    }
+.navbar ul a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
 
-    .nav-links {
-        list-style: none;
-        display: flex;
-        gap: 35px;
-    }
+.logo {
+  color: white;
+  font-size: 1.5rem;
+}
 
-    .nav-links a {
-        text-decoration: none;
-        color: #e8f7ff;
-        font-size: 1rem;
-        transition: 0.2s ease;
-    }
+.nav-btn {
+  padding: 10px 18px;
+  border: none;
+  background: #fff;
+  color: #0099ff;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+}
 
-    .nav-links a:hover {
-        opacity: 0.8;
-        border-bottom: 2px solid #fff;
-        padding-bottom: 3px;
-    }
+.nav-btn:hover {
+  background: #e5f6ff;
+}
 
-    .nav-actions {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
+/* HEADER BACKGROUND */
+.library-header {
+  background: linear-gradient(135deg, #0e3a46, #146b82);
+  color: #fff;
+  padding-bottom: 80px;
+}
 
-    .nav-search {
-        padding: 10px 14px;
-        border-radius: 25px;
-        border: none;
-        outline: none;
-        width: 200px;
-    }
+/* NAVBAR */
+.library-nav {
+  padding: 25px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-    .nav-btn {
-        padding: 10px 20px;
-        border: none;
-        background: #fff;
-        color: #0e3a46;
-        border-radius: 25px;
-        cursor: pointer;
-        font-weight: 600;
-        transition: 0.2s ease;
-    }
+.nav-logo {
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
 
-    .nav-btn:hover {
-        background: #e6f7fa;
-    }
+/* NAV LINKS */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #e8f7ff;
+  font-size: 1rem;
+  transition: 0.2s ease;
+}
+
+.nav-links a:hover {
+  opacity: 0.8;
+  padding-bottom: 4px;
+  border-bottom: 2px solid #fff;
+}
+
+/* SEARCH + CTA */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-search {
+  padding: 10px 14px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  width: 200px;
+}
+
+.nav-btn {
+  padding: 10px 20px;
+  border: none;
+  background: #fff;
+  color: #0e3a46;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.nav-btn:hover {
+  background: #e6f7fa;
+}
 
     /* REGISTER FORM */
     .register-container {
@@ -133,7 +177,6 @@
         background: #146b82;
     }
 
-    /* FOOTER (copied from your theme) */
     .footer {
         background: #0d1b2a;
         color: #dce3e9;
@@ -192,24 +235,22 @@
 
 </head>
 <body>
-
-
-<nav class="library-nav">
-    <div class="nav-logo">📚 LibraryHub</div>
-
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="genre.html">Genres</a></li>
-        <li><a href="books.html">Books</a></li>
-        <li><a href="#">Membership</a></li>
-        <li><a href="#">About</a></li>
-    </ul>
-
-    <div class="nav-actions">
-        <input type="text" class="nav-search" placeholder="Search books…">
-        <button class="nav-btn">Join Now</button>
-    </div>
-</nav>
+<header class="library-header">
+      <nav class="library-nav">
+        <div class="nav-logo">📚 LibraryHub</div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="genre.html">Genres</a></li>
+          <li><a href="books.html">Books</a></li>
+          <li><a href="Log-in.html">log in</a></li>
+          <li><a href="contact.html">About</a></li>
+        </ul>
+        <div class="nav-actions">
+          <input type="text" placeholder="Search books…" class="nav-search" />
+        </div>
+      </nav>
+    </header>
+    <br>
 
 <div class="register-container">
     <h2>Create Account</h2>
@@ -221,7 +262,6 @@
 
     <button class="register-btn">Register</button>
 </div>
-
 
 <footer class="footer">
     <div class="footer-container">
